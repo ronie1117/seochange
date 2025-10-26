@@ -1210,4 +1210,4 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=debug_mode)
 
 # 用于WSGI服务器的应用入口
-# wsgi_app = app  # 注释掉未使用的变量
+wsgi_app = app
