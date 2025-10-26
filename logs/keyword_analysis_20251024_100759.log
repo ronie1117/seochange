@@ -1,0 +1,19 @@
+2025-10-24 10:07:59,781 - keyword_analyzer - INFO - 日志文件已创建: D:\pythonproject\seo-select\logs\keyword_analysis_20251024_100759.log
+2025-10-24 10:07:59,783 - keyword_analyzer - INFO - 已加载.env文件: D:\pythonproject\seo-select\.env
+2025-10-24 10:07:59,783 - keyword_analyzer - INFO - 开始从keywords.md文件读取关键词
+2025-10-24 10:07:59,783 - keyword_analyzer - INFO - 开始从markdown文件读取关键词筛选规则，文件夹: data
+2025-10-24 10:07:59,783 - keyword_analyzer - INFO - 发现markdown文件: data\keywords.md
+2025-10-24 10:07:59,783 - keyword_analyzer - INFO - 从 data\keywords.md 读取了 2 个关键词
+2025-10-24 10:07:59,783 - keyword_analyzer - INFO - 已加载关键词筛选规则，共 2 个关键词
+2025-10-24 10:07:59,784 - keyword_analyzer - INFO - 从keywords.md读取到的关键词模式: powerpoint|slide
+2025-10-24 10:07:59,784 - keyword_analyzer - INFO - 已设置默认关键词模式: powerpoint|slide
+2025-10-24 10:07:59,784 - keyword_analyzer - INFO - 已配置通义模型: tongyi
+2025-10-24 10:07:59,788 - keyword_analyzer - INFO - 已加载.env文件: D:\pythonproject\seo-select\.env
+2025-10-24 10:07:59,788 - keyword_analyzer - INFO - 开始从keywords.md文件读取关键词
+2025-10-24 10:07:59,788 - keyword_analyzer - INFO - 开始从markdown文件读取关键词筛选规则，文件夹: data
+2025-10-24 10:07:59,788 - keyword_analyzer - INFO - 发现markdown文件: data\keywords.md
+2025-10-24 10:07:59,788 - keyword_analyzer - INFO - 从 data\keywords.md 读取了 2 个关键词
+2025-10-24 10:07:59,788 - keyword_analyzer - INFO - 已加载关键词筛选规则，共 2 个关键词
+2025-10-24 10:07:59,788 - keyword_analyzer - INFO - 从keywords.md读取到的关键词模式: powerpoint|slide
+2025-10-24 10:07:59,788 - keyword_analyzer - INFO - 已设置默认关键词模式: powerpoint|slide
+2025-10-24 10:07:59,788 - keyword_analyzer - INFO - 已配置通义模型: tongyi

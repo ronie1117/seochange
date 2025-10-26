@@ -1,0 +1,38 @@
+2025-10-24 14:43:19,714 - keyword_analyzer - INFO - 日志文件已创建: D:\pythonproject\seo-select\logs\keyword_analysis_20251024_144319.log
+2025-10-24 14:43:19,717 - keyword_analyzer - INFO - 已加载.env文件: D:\pythonproject\seo-select\.env
+2025-10-24 14:43:19,717 - keyword_analyzer - INFO - 开始从keywords.md文件读取关键词
+2025-10-24 14:43:19,718 - keyword_analyzer - INFO - 开始从markdown文件读取关键词筛选规则，文件夹: data
+2025-10-24 14:43:19,718 - keyword_analyzer - INFO - 发现markdown文件: data\keywords.md
+2025-10-24 14:43:19,718 - keyword_analyzer - INFO - 从 data\keywords.md 读取了 1 个关键词
+2025-10-24 14:43:19,718 - keyword_analyzer - INFO - 已加载关键词筛选规则，共 1 个关键词
+2025-10-24 14:43:19,719 - keyword_analyzer - INFO - 从keywords.md读取到的关键词模式: powepoint
+2025-10-24 14:43:19,719 - keyword_analyzer - INFO - 已设置默认关键词模式: powepoint
+2025-10-24 14:43:19,719 - keyword_analyzer - INFO - 已配置通义模型: tongyi
+2025-10-24 14:43:19,724 - keyword_analyzer - INFO - 日志文件已创建: D:\pythonproject\seo-select\logs\keyword_analysis_20251024_144319.log
+2025-10-24 14:43:19,726 - keyword_analyzer - INFO - 已加载.env文件: D:\pythonproject\seo-select\.env
+2025-10-24 14:43:19,726 - keyword_analyzer - INFO - 开始从keywords.md文件读取关键词
+2025-10-24 14:43:19,726 - keyword_analyzer - INFO - 开始从markdown文件读取关键词筛选规则，文件夹: data
+2025-10-24 14:43:19,726 - keyword_analyzer - INFO - 发现markdown文件: data\keywords.md
+2025-10-24 14:43:19,726 - keyword_analyzer - INFO - 已加载.env文件: D:\pythonproject\seo-select\.env
+2025-10-24 14:43:19,726 - keyword_analyzer - INFO - 开始从keywords.md文件读取关键词
+��
+2025-10-24 14:43:19,727 - keyword_analyzer - INFO - 已加载关键词筛选规则，共 1 个关键词
+2025-10-24 14:43:19,727 - keyword_analyzer - INFO - 从keywords.md读取到的关键词模式: powepoint
+2025-10-24 14:43:19,727 - keyword_analyzer - INFO - 已设置默认关键词模式: powepoint
+�规则，文件夹: data
+2025-10-24 14:43:19,727 - keyword_analyzer - INFO - 已配置通义模型: tongyi
+2025-10-24 14:43:19,727 - keyword_analyzer - INFO - 发现markdown文件: data\keywords.md
+2025-10-24 14:43:19,727 - keyword_analyzer - INFO - 从 data\keywords.md 读取了 1 个关键词
+2025-10-24 14:43:19,727 - keyword_analyzer - INFO - 已加载关键词筛选规则，共 1 个关键词
+2025-10-24 14:43:19,727 - keyword_analyzer - INFO - 从keywords.md读取到的关键词模式: powepoint
+2025-10-24 14:43:19,727 - keyword_analyzer - INFO - 已设置默认关键词模式: powepoint
+2025-10-24 14:43:19,727 - keyword_analyzer - INFO - 已配置通义模型: tongyi
+2025-10-24 14:43:19,733 - keyword_analyzer - INFO - 已加载.env文件: D:\pythonproject\seo-select\.env
+2025-10-24 14:43:19,733 - keyword_analyzer - INFO - 开始从keywords.md文件读取关键词
+2025-10-24 14:43:19,734 - keyword_analyzer - INFO - 开始从markdown文件读取关键词筛选规则，文件夹: data
+2025-10-24 14:43:19,734 - keyword_analyzer - INFO - 发现markdown文件: data\keywords.md
+2025-10-24 14:43:19,734 - keyword_analyzer - INFO - 从 data\keywords.md 读取了 1 个关键词
+2025-10-24 14:43:19,734 - keyword_analyzer - INFO - 已加载关键词筛选规则，共 1 个关键词
+2025-10-24 14:43:19,734 - keyword_analyzer - INFO - 从keywords.md读取到的关键词模式: powepoint
+2025-10-24 14:43:19,734 - keyword_analyzer - INFO - 已设置默认关键词模式: powepoint
+2025-10-24 14:43:19,734 - keyword_analyzer - INFO - 已配置通义模型: tongyi
