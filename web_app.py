@@ -156,7 +156,7 @@ def index():
                             <div class="mt-1">
                                 <div class="flex items-center g-input px-4 py-2">
                                     <i class="fa fa-key text-gray-400 mr-2"></i>
-                                    <input type="password" id="ai_api_key" name="ai_api_key" placeholder="输入您的AI API密钥" class="flex-1 outline-none bg-transparent caret-gray-700 text-sm" />
+                                    <input type="password" id="ai_api_key" name="ai_api_key" placeholder="输入您的AI API密钥" class="flex-1 outline-none bg-transparent caret-gray-700 text-sm" required />
                                 </div>
                             </div>
                         </div>
@@ -168,7 +168,7 @@ def index():
                             <div class="mt-1">
                                 <div class="flex items-center g-input px-4 py-2">
                                     <i class="fa fa-link text-gray-400 mr-2"></i>
-                                    <input type="text" id="ai_api_url" name="ai_api_url" placeholder="例如: https://api.example.com/v1/chat/completions" class="flex-1 outline-none bg-transparent caret-gray-700 text-sm" />
+                                    <input type="url" id="ai_api_url" name="ai_api_url" placeholder="例如: https://api.example.com/v1/chat/completions" class="flex-1 outline-none bg-transparent caret-gray-700 text-sm" required />
                                 </div>
                             </div>
                             <div class="mt-2 text-xs text-gray-600 space-y-1">
@@ -823,9 +823,9 @@ def analyze():
             logger.warning("关键词筛选规则为空")
             return jsonify({'error': '请输入关键词筛选规则'}), 400
         
-        # 获取AI API配置
-        ai_api_key = request.form.get('ai_api_key', '')
-        ai_api_url = request.form.get('ai_api_url', '')
+        # 获取AI API配置（前端必须提交）
+        ai_api_key = request.form.get('ai_api_key', '').strip()
+        ai_api_url = request.form.get('ai_api_url', '').strip()
         ai_model = request.form.get('ai_model', '')
         # 获取进度键
         progress_key = request.form.get('progress_key', '')
@@ -880,6 +880,14 @@ def analyze():
         keyword_config = config_manager.get_keyword_config()
         export_config = config_manager.get_export_config()
         ai_config = config_manager.get_ai_api_config()
+
+        # 强校验：前端必须提交密钥与端点
+        if not ai_api_key:
+            logger.warning("缺少AI API密钥")
+            return jsonify({'error': '缺少AI API密钥'}), 400
+        if not ai_api_url:
+            logger.warning("缺少AI API端点URL")
+            return jsonify({'error': '缺少AI API端点URL'}), 400
         
         # 为进度持久化创建progress文件
         progress_file = None
@@ -923,7 +931,7 @@ def analyze():
             keyword_columns=keyword_config['keyword_columns'],
             volume_columns=keyword_config['volume_columns'],
             output_filename_prefix=export_config['output_filename_prefix'],
-            ai_api_endpoint=ai_config['endpoint'],
+            ai_api_endpoint=ai_api_url,
             ai_api_key=ai_api_key,
             progress_callback=progress_callback
         )
