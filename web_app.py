@@ -831,7 +831,55 @@ def analyze():
         progress_key = request.form.get('progress_key', '')
         
         # 记录API配置日志（注意：不要记录完整的API密钥）
-        logger.info(f"接收到AI配置 - 模型: {ai_model}, URL: {ai_api_url[:30] if ai_api_url else '未提供'}")
+        logger.info(f"接收到AI配置 - 模型: {ai_model}, URL: {ai_api_url[:30] if ai_api_url else '未提供'}, key_len: {len(ai_api_key) if ai_api_key else 0}")
+
+        # 提前强校验：前端必须提交密钥与端点，否则不继续后续文件处理
+        if not ai_api_key:
+            logger.warning("缺少AI API密钥")
+            return jsonify({'error': '缺少AI API密钥'}), 400
+        if not ai_api_url:
+            logger.warning("缺少AI API端点URL")
+            return jsonify({'error': '缺少AI API端点URL'}), 400
+
+        # 清除并用表单值覆盖进程级环境变量，避免读取Railway原有变量
+        try:
+            for k in ['DEEPSEEK_ENDPOINT','DEEPSEEK_API_KEY','TONGYI_ENDPOINT','TONGYI_API_KEY','AI_API_ENDPOINT','AI_API_KEY','AI_MODEL_TYPE']:
+                if k in os.environ:
+                    os.environ.pop(k, None)
+            # 写入通用变量
+            os.environ['AI_API_ENDPOINT'] = ai_api_url
+            os.environ['AI_API_KEY'] = ai_api_key
+            # 写入模型类型及模型专属变量
+            ai_model_effective = (ai_model or 'deepseek').lower()
+            os.environ['AI_MODEL_TYPE'] = ai_model_effective
+            if ai_model_effective == 'tongyi':
+                os.environ['TONGYI_ENDPOINT'] = ai_api_url
+                os.environ['TONGYI_API_KEY'] = ai_api_key
+            else:
+                os.environ['DEEPSEEK_ENDPOINT'] = ai_api_url
+                os.environ['DEEPSEEK_API_KEY'] = ai_api_key
+            logger.info("已根据表单输入刷新进程级环境变量")
+        except Exception as _e:
+            logger.warning("刷新进程环境变量失败，但不影响后续分析")
+
+        # 可选：将表单配置写入 .env，供后续实例或外部参考（不会自动读取）
+        try:
+            _config_to_save = {
+                'AI_API_ENDPOINT': ai_api_url,
+                'AI_API_KEY': ai_api_key,
+                'AI_MODEL_TYPE': (ai_model or 'deepseek').lower()
+            }
+            if _config_to_save['AI_MODEL_TYPE'] == 'tongyi':
+                _config_to_save.update({'TONGYI_ENDPOINT': ai_api_url, 'TONGYI_API_KEY': ai_api_key})
+            else:
+                _config_to_save.update({'DEEPSEEK_ENDPOINT': ai_api_url, 'DEEPSEEK_API_KEY': ai_api_key})
+            # 仅写入文件，不在本次请求中加载，以确保不会使用Railway原值
+            try:
+                config_manager.save_config_to_env(_config_to_save)
+            except Exception:
+                pass
+        except Exception:
+            pass
             
         # 保存上传的Excel文件（使用FileUploader处理）
         saved_filepaths = []
@@ -881,13 +929,7 @@ def analyze():
         export_config = config_manager.get_export_config()
         ai_config = config_manager.get_ai_api_config()
 
-        # 强校验：前端必须提交密钥与端点
-        if not ai_api_key:
-            logger.warning("缺少AI API密钥")
-            return jsonify({'error': '缺少AI API密钥'}), 400
-        if not ai_api_url:
-            logger.warning("缺少AI API端点URL")
-            return jsonify({'error': '缺少AI API端点URL'}), 400
+        # 到这里说明表单已提供必要AI配置
         
         # 为进度持久化创建progress文件
         progress_file = None
