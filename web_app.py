@@ -122,7 +122,7 @@ def index():
                                         <span>选择文件</span>
                                         <input id="file" name="file" type="file" accept=".xlsx,.xls" multiple class="sr-only">
                                     </label>
-                                    <p class="pl-1">或拖放文件</p>
+                                    <p class="pl-1"></p>
                                 </div>
                                 <div id="file-list" class="mt-3 text-sm bg-white border border-gray-200 rounded-md p-2 hidden"></div>
                                 <p class="text-xs text-gray-500">
