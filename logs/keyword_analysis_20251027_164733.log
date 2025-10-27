@@ -1,0 +1,64 @@
+2025-10-27 16:47:33,160 - keyword_analyzer - INFO - 日志文件已创建: D:\pythonproject\seo-select\logs\keyword_analysis_20251027_164733.log
+2025-10-27 16:47:33,162 - keyword_analyzer - INFO - 已加载.env文件: D:\pythonproject\seo-select\.env
+2025-10-27 16:47:33,162 - keyword_analyzer - INFO - 开始从keywords.md文件读取关键词
+2025-10-27 16:47:33,162 - keyword_analyzer - INFO - 开始从markdown文件读取关键词筛选规则，文件夹: data
+2025-10-27 16:47:33,162 - keyword_analyzer - INFO - 发现markdown文件: data\keywords.md
+2025-10-27 16:47:33,163 - keyword_analyzer - INFO - 从 data\keywords.md 读取了 1 个关键词
+2025-10-27 16:47:33,163 - keyword_analyzer - INFO - 已加载关键词筛选规则，共 1 个关键词
+2025-10-27 16:47:33,163 - keyword_analyzer - INFO - 从keywords.md读取到的关键词模式: powerpoint
+2025-10-27 16:47:33,164 - keyword_analyzer - INFO - 已设置默认关键词模式: powerpoint
+2025-10-27 16:47:33,164 - keyword_analyzer - INFO - 已配置通义模型: tongyi
+2025-10-27 16:47:33,173 - keyword_analyzer - INFO - 已加载.env文件: D:\pythonproject\seo-select\.env
+2025-10-27 16:47:33,173 - keyword_analyzer - INFO - 开始从keywords.md文件读取关键词
+2025-10-27 16:47:33,173 - keyword_analyzer - INFO - 开始从markdown文件读取关键词筛选规则，文件夹: data
+2025-10-27 16:47:33,173 - keyword_analyzer - INFO - 发现markdown文件: data\keywords.md
+2025-10-27 16:47:33,173 - keyword_analyzer - INFO - 从 data\keywords.md 读取了 1 个关键词
+2025-10-27 16:47:33,174 - keyword_analyzer - INFO - 已加载关键词筛选规则，共 1 个关键词
+2025-10-27 16:47:33,174 - keyword_analyzer - INFO - 从keywords.md读取到的关键词模式: powerpoint
+2025-10-27 16:47:33,174 - keyword_analyzer - INFO - 已设置默认关键词模式: powerpoint
+2025-10-27 16:47:33,174 - keyword_analyzer - INFO - 已配置通义模型: tongyi
+2025-10-27 16:51:19,569 - keyword_analyzer - INFO - 提取到 1 个关键词规则
+2025-10-27 16:51:19,569 - keyword_analyzer - INFO - 关键词规则已成功保存到: data\keywords.md
+2025-10-27 16:51:19,582 - keyword_analyzer - INFO - 从文件加载了 1 个关键词规则
+2025-10-27 16:51:19,836 - keyword_analyzer - INFO - 初始化时设置默认关键词模式: slide|ppt|powerpoint|presentation
+2025-10-27 16:51:19,850 - keyword_analyzer - INFO - 调用read_keyword_patterns_from_markdown方法
+2025-10-27 16:51:19,850 - keyword_analyzer - INFO - 从markdown文件读取关键词筛选条件: keywords.md
+2025-10-27 16:51:19,856 - keyword_analyzer - INFO - 已更新关键词筛选条件，共 1 个关键词
+2025-10-27 16:51:19,856 - keyword_analyzer - INFO - 关键词模式: slide
+2025-10-27 16:51:19,856 - keyword_analyzer - INFO - 从markdown文件读取关键词筛选条件: keywords.md
+2025-10-27 16:51:19,856 - keyword_analyzer - INFO - 已更新关键词筛选条件，共 1 个关键词
+2025-10-27 16:51:19,856 - keyword_analyzer - INFO - 关键词模式: slide
+2025-10-27 16:51:19,856 - keyword_analyzer - INFO - 开始关键词分析流程...
+2025-10-27 16:51:19,857 - keyword_analyzer - INFO - 从markdown文件读取关键词筛选条件: keywords.md
+2025-10-27 16:51:19,857 - keyword_analyzer - INFO - 已更新关键词筛选条件，共 1 个关键词
+2025-10-27 16:51:19,857 - keyword_analyzer - INFO - 关键词模式: slide
+2025-10-27 16:51:19,857 - keyword_analyzer - INFO - 找到 1 个Excel文件
+2025-10-27 16:51:19,857 - keyword_analyzer - INFO - - upload_20251027_165119_829.xlsx
+2025-10-27 16:51:20,237 - keyword_analyzer - INFO - 处理文件: upload_20251027_165119_829.xlsx
+2025-10-27 16:51:20,237 - keyword_analyzer - INFO - 文件形状: (83, 3)
+2025-10-27 16:51:20,237 - keyword_analyzer - INFO - 列名: ['Keyword', 'Volume', 'Keyword Difficulty']
+2025-10-27 16:51:20,239 - keyword_analyzer - INFO - 在文件 upload_20251027_165119_829.xlsx 中找到关键词列: Keyword
+2025-10-27 16:51:20,242 - keyword_analyzer - INFO - 筛选后关键词数量: 83
+2025-10-27 16:51:20,243 - keyword_analyzer - INFO - 在文件 upload_20251027_165119_829.xlsx 中找到搜索量列: Volume
+2025-10-27 16:51:20,244 - keyword_analyzer - INFO - 所有文件合并后筛选的关键词总数: 83
+2025-10-27 16:51:20,244 - keyword_analyzer - INFO - 开始分析关键词 - 总数量: 83
+2025-10-27 16:51:20,244 - keyword_analyzer - INFO - 使用关键词列: Keyword
+2025-10-27 16:51:20,246 - keyword_analyzer - INFO - 去重后关键词数量: 83
+2025-10-27 16:51:20,246 - keyword_analyzer - INFO - 使用搜索量列: volume
+2025-10-27 16:51:20,246 - keyword_analyzer - INFO - 开始批量处理关键词分类
+2025-10-27 16:51:34,484 - keyword_analyzer - INFO - 已处理 10/83 个关键词
+2025-10-27 16:51:51,822 - keyword_analyzer - INFO - 已处理 20/83 个关键词
+2025-10-27 16:52:08,051 - keyword_analyzer - INFO - 已处理 30/83 个关键词
+2025-10-27 16:52:24,249 - keyword_analyzer - INFO - 已处理 40/83 个关键词
+2025-10-27 16:52:41,605 - keyword_analyzer - INFO - 已处理 50/83 个关键词
+2025-10-27 16:52:57,484 - keyword_analyzer - INFO - 已处理 60/83 个关键词
+2025-10-27 16:53:14,113 - keyword_analyzer - INFO - 已处理 70/83 个关键词
+2025-10-27 16:53:30,604 - keyword_analyzer - INFO - 已处理 80/83 个关键词
+2025-10-27 16:53:37,436 - keyword_analyzer - INFO - 关键词分类完成
+2025-10-27 16:53:37,464 - keyword_analyzer - INFO - 开始导出Excel文件: D:\pythonproject\seo-select\uploads\results_20251027_165119_835\keyword_analysis_20251027_165337.xlsx
+2025-10-27 16:53:37,601 - keyword_analyzer - INFO - Excel文件导出成功: D:\pythonproject\seo-select\uploads\results_20251027_165119_835\keyword_analysis_20251027_165337.xlsx
+2025-10-27 16:53:37,601 - keyword_analyzer - INFO - 分析完成，结果已导出到: D:\pythonproject\seo-select\uploads\results_20251027_165119_835\keyword_analysis_20251027_165337.xlsx
+2025-10-27 16:53:37,601 - keyword_analyzer - INFO - 关键词分析完成！
+2025-10-27 16:53:37,601 - keyword_analyzer - INFO - 总关键词数量: 83
+2025-10-27 16:53:37,601 - keyword_analyzer - INFO - 主题数量: 38
+2025-10-27 16:53:37,601 - keyword_analyzer - INFO - 结果文件: D:\pythonproject\seo-select\uploads\results_20251027_165119_835\keyword_analysis_20251027_165337.xlsx
